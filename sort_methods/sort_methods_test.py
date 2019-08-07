@@ -6,7 +6,7 @@ from sort_methods.bubble_sort import bubble_sort
 from sort_methods.insert_sort import insert_sort
 from sort_methods.merge_sort import merge_sort
 from sort_methods.quick_sort import quick_sort
-
+from sort_methods.heap_sort import heap_sort
 import sys
 # sys.setrecursionlimit(100000)
 
@@ -17,4 +17,4 @@ if __name__ == '__main__':
     insert_sort(raw_list)
     merge_sort(raw_list)
     quick_sort(raw_list)
-
+    heap_sort(raw_list)
