@@ -3,6 +3,7 @@
 
 from utils import time_it
 
+
 @time_it
 def heap_sort(sort_list: list) -> list:
     def parent(index):
