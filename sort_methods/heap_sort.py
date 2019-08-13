@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from utils import time_it
+from utils import time_it, assert_sort
 
 
+@assert_sort
 @time_it
 def heap_sort(sort_list: list) -> list:
     def parent(index):

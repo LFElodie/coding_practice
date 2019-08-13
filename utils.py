@@ -22,3 +22,23 @@ def time_it(func):
             result = func(*args, **kwargs)
         return result
     return wrap
+
+
+def assert_sort(func):
+    """
+    用于对排序的结果进行判断
+    :param func:
+    :return:
+    """
+    def wrap(*args, **kwargs):
+        result = func(*args, **kwargs)
+        try:
+            assert result == sorted(*args, **kwargs)
+        except AssertionError as e:
+            print('Result is incorrect')
+            print('Right answer is:')
+            print(sorted(*args, **kwargs))
+            return result
+        else:
+            return result
+    return wrap

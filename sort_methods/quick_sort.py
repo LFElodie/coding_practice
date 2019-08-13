@@ -2,9 +2,10 @@
 # -*- coding: utf-8 -*-
 import random
 
-from utils import time_it
+from utils import time_it, assert_sort
 
 
+@assert_sort
 @time_it
 def quick_sort(sort_list: list) -> list:
     def randomized_partition(nums: list, begin: int, end: int) -> int:
