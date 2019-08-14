@@ -16,7 +16,7 @@ def quick_sort(sort_list: list) -> list:
     def partition(nums: list, begin: int, end: int) -> int:
         pivot = nums[begin]
         i = begin
-        for j in range(begin + 1, end):
+        for j in range(begin + 1, end + 1):
             if sort_list[j] < pivot:
                 i += 1
                 sort_list[j], sort_list[i] = sort_list[i], sort_list[j]
