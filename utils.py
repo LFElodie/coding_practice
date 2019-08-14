@@ -36,6 +36,10 @@ def assert_sort(func):
             assert result == sorted(*args, **kwargs)
         except AssertionError as e:
             print('Result is incorrect')
+            print('Input is:')
+            print(*args, **kwargs)
+            print('Result is:')
+            print(result)
             print('Right answer is:')
             print(sorted(*args, **kwargs))
             return result
