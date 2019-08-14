@@ -34,7 +34,7 @@ def heap_sort(sort_list: list) -> list:
             max_heapify(nums, i, heap_size_)
     heap_size = len(sort_list)
     build_max_heap(sort_list, heap_size)
-    for i in range(len(sort_list)-1, 1, -1):
+    for i in range(len(sort_list)-1, 0, -1):
         sort_list[0], sort_list[i] = sort_list[i], sort_list[0]
         heap_size -= 1
         max_heapify(sort_list, 0, heap_size)
