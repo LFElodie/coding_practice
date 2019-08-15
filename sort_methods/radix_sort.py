@@ -21,7 +21,7 @@ def radix_sort(sort_list: list) -> list:
         return result
     max_num = max(sort_list)
     exp = 1
-    while max_num/exp > 0:
+    while max_num//exp > 0:
         sort_list = counting_sort(sort_list, exp)
         exp *= 10
     return sort_list
